@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onButtonPress()" id="btn">Counter 0</button>
+    <button onclick="reset()" id="resetBtn">Reset</button>
+</body>
+<script>
+    function onButtonPress(){
+        const currentValue = document.getElementById('btn').innerHTML;
+        const currentCounter = currentValue.split(" ")[1];
+        const newCounter = parseFloat(currentCounter)+1;
+        document.getElementById("btn").innerHTML = "Counter "+newCounter;
+    }
+
+    function reset(){
+        // let counterValue = document.getElementById('btn').innerHTML.split(" ")[1];
+        // counterValue = 0;
+        document.getElementById('btn').innerHTML = `Counter 0`;
+
+    }
+</script>
+</html>
